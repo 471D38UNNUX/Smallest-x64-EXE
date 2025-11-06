@@ -21,7 +21,7 @@ _IMAGE_OPTIONAL_HEADER64_STANDARD_FIELDS:
     dd                          0
     dd                          0
     dd                          ENTRY
-    dd                          ENTRY
+    dd                          0
 ;   _IMAGE_OPTIONAL_HEADER64_WINDOWS_SPECIFIC_FIELDS
     dq                          0x10000
     dd                          _IMAGE_NT_HEADERS64             ;   File address of new exe header | Section alignment
@@ -47,5 +47,5 @@ _IMAGE_OPTIONAL_HEADER64_STANDARD_FIELDS:
     times                       127 db 0
 HEADER_SIZE                     equ $ - $$
 ENTRY:
-    ret                                                                     ;   return value (rax) is current instruction pointer (rip) = Image Base (0x10000) + offset of ENTRY (0x10b) = 0x1010b (65536 + 267 = 65803)
+    ret                                                         ;   return value (rax) is current instruction pointer (rip) = Image Base (0x10000) + offset of ENTRY (0x10b) = 0x1010b (65536 + 267 = 65803)
 FILE_SIZE                       equ $ - $$
