@@ -43,7 +43,7 @@ _IMAGE_OPTIONAL_HEADER64_STANDARD_FIELDS:
     dq                          0                               ;   [UNUSED] Size of heap reserve
     dq                          0                               ;   [UNUSED] Size of heap commit
     dd                          0                               ;   [UNUSED] Loader flags (Reserved, must be zero)
-    dd                          0                               ;   [UNUSED] Number of virtual address and sizes
+    dd                          0                               ;   Number of virtual address and sizes
     times                       127 db 0
 HEADER_SIZE                     equ $ - $$
 ENTRY:
