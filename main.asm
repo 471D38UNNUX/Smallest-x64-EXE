@@ -5,7 +5,7 @@ bits 64
 _IMAGE_NT_HEADERS64:
     db                          'PE', 0, 0                      ;   [UNUSED] Pages in file & [UNUSED] Relocations | Signature
 ;   _IMAGE_FILE_HEADER
-    dw                          0x8664                          ;   [UNUSED] Size of header in paragraphs | Machine (IMAGE_FILE_MACHINE_AMD64)
+    dw                          0x8664                          ;   [UNUSED] Size of header in paragraphs | Machine (AMD64 (K8))
     dw                          0                               ;   [UNUSED] Minimum extra paragraphs needed | Number of sections
     dd                          0                               ;   [UNUSED] Maximum extra paragraphs needed & [UNUSED] Initial (relative) SS value | [UNUSED] Time date stamp (Optional)
     dd                          0                               ;   [UNUSED] Initial SP value & [UNUSED] Checksum | [UNUSED] Pointer to symbol table (no COFF symbol table)
